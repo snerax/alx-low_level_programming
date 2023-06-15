@@ -16,7 +16,7 @@ int main(void)
 
 	ret = write(STDERR_FILENO, message, len);
 	if (ret != (ssize_t)len)
-		return 1;
+		return (1);
 
-	return 1;
+	return (0);
 }
