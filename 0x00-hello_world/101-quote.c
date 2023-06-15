@@ -18,7 +18,8 @@ int main(void)
 
 	ret = syscall(SYS_write, STDERR_FILENO, message, len);
 	if (ret != (ssize_t)len)
-		return 1;
+		return (1);
 
-	return 1;
+	return (1);
 }
+
