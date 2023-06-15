@@ -1,7 +1,5 @@
 #include <unistd.h>
-#include <sys/syscall.h>
-
-#define STDERR_FILENO 2
+#include <string.h>
 
 /**
  * main - Entry point of the program
@@ -13,12 +11,12 @@
 int main(void)
 {
 	const char *message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	size_t len = sizeof(message) - 1;
+	size_t len = strlen(message);
 	ssize_t ret;
 
-	ret = syscall(SYS_write, STDERR_FILENO, message, len);
+	ret = write(STDERR_FILENO, message, len);
 	if (ret != (ssize_t)len)
-		return (1);
+		return 1;
 
-	return (1);
+	return 1;
 }
