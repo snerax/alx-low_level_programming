@@ -2,23 +2,27 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main() {
-    srand(time(NULL)); /* Seed the random number generator */
-
-    int n;
-    n = rand();
-
-    printf("The number %d is ", n);
-
-    if (n > 0) {
-        printf("positive");
-    } else if (n == 0) {
-        printf("zero");
-    } else {
-        printf("negative");
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+    srand(time(NULL));
+    int n = rand();
+    printf("%d ", n);
+    if (n > 0)
+    {
+        printf("is positive\n");
     }
-
-    printf("\n");
-
-    return 0;
+    else if (n == 0)
+    {
+        printf("is zero\n");
+    }
+    else
+    {
+        printf("is negative\n");
+    }
+    return (0);
 }
