@@ -1,24 +1,23 @@
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main() {
     srand(time(0)); // Seed the random number generator
 
-    int n = rand() % RAND_MAX; // Generate a random number
+    int n = rand();
 
-    std::cout << "The number " << n << " is ";
+    printf("The number %d is ", n);
 
     if (n > 0) {
-        std::cout << "positive";
+        printf("positive");
     } else if (n == 0) {
-        std::cout << "zero";
+        printf("zero");
     } else {
-        std::cout << "negative";
+        printf("negative");
     }
 
-    std::cout << std::endl;
+    printf("\n");
 
     return 0;
-}
 }
