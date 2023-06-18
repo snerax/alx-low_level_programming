@@ -5,7 +5,8 @@
 int main() {
     srand(time(0)); // Seed the random number generator
 
-    int n = rand();
+    int n;
+    n = rand();
 
     printf("The number %d is ", n);
 
