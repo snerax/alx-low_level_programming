@@ -1,22 +1,13 @@
+#include <stdio.h>
 #include <unistd.h>
-#include <string.h>
-
 /**
- * main - Entry point of the program
- *
- * Description: Prints the specified message to the standard error
- *
- * Return: Always 1
- */
+* main - Entry point
+*
+* Return: Always 1 (Success)
+*/
 int main(void)
 {
-	const char *message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	size_t len = strlen(message);
-	ssize_t ret;
-
-	ret = write(STDERR_FILENO, message, len);
-	if (ret != (ssize_t)len)
-		return (1);
-
-	return (0);
+write(2,
+"and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
+return (1);
 }
