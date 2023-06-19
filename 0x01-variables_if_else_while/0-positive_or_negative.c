@@ -2,19 +2,28 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main() {
-    srand(time(NULL));
-    int n = rand() % 201 - 100;
+/**
+ * main - Entry point
+ *
+ * Description: Prints whether a randomly generated number is positive or negative.
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	int n;
 
-    printf("%d\n", n);
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
 
-    if (n > 0) {
-        printf("is positive\n");
-    } else if (n == 0) {
-        printf("is zero\n");
-    } else {
-        printf("is negative\n");
-    }
+	printf("The number %d is ", n);
 
-    return 0;
+	if (n > 0)
+		printf("positive\n");
+	else if (n == 0)
+		printf("zero\n");
+	else
+		printf("negative\n");
+
+	return (0);
 }
