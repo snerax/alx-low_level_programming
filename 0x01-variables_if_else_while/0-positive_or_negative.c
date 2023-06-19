@@ -5,24 +5,25 @@
 /**
  * main - Entry point
  *
+ * Description: Prints whether a randomly generated number is positive or negative.
+ *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-    srand(time(NULL));
-    int n = rand();
-    printf("%d ", n);
-    if (n > 0)
-    {
-        printf("is positive\n");
-    }
-    else if (n == 0)
-    {
-        printf("is zero\n");
-    }
-    else
-    {
-        printf("is negative\n");
-    }
-    return (0);
+	int n;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+
+	printf("The number %d is ", n);
+
+	if (n > 0)
+		printf("positive\n");
+	else if (n == 0)
+		printf("zero\n");
+	else
+		printf("negative\n");
+
+	return (0);
 }
