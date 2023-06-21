@@ -1,35 +1,20 @@
-#include <stdio.h>
 #include "main.h"
-
 /**
- * print_putchar - Prints _putchar followed by a new line using nested while loops.
+ * main - print _putchar
+ * is written by mbah
+ * Return: 0
  */
-void print_putchar(void)
-{
-    int outer_counter = 0;
 
-    while (outer_counter < 5)
-    {
-        int inner_counter = 0;
-
-        while (inner_counter < 5)
-        {
-            putchar('_');
-            inner_counter++;
-        }
-
-        putchar('\n');
-        outer_counter++;
-    }
-}
-
-/**
- * main - Entry point of the program.
- *
- * Return: Always 0.
- */
 int main(void)
 {
-    print_putchar();
-    return 0;
+_putchar('_');
+_putchar('p');
+_putchar('u');
+_putchar('t');
+_putchar('c');
+_putchar('h');
+_putchar('a');
+_putchar('r');
+_putchar('\n');
+return (0);
 }
