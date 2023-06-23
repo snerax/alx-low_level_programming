@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-int is_uppercase(char character) {
-    if (character >= 'A' && character <= 'Z') {
+int _isupper(int c) {
+    if (c >= 'A' && c <= 'Z') {
         return 1; // uppercase
     } else {
         return 0; // not uppercase
@@ -9,15 +9,15 @@ int is_uppercase(char character) {
 }
 
 int main() {
-    char ch1 = 'A';
-    char ch2 = 'a';
-    char ch3 = '1';
-    char ch4 = '!';
+    int ch1 = 'A';
+    int ch2 = 'a';
+    int ch3 = '1';
+    int ch4 = '!';
 
-    printf("%d\n", is_uppercase(ch1)); // 1 (true)
-    printf("%d\n", is_uppercase(ch2)); // 0 (false)
-    printf("%d\n", is_uppercase(ch3)); // 0 (false)
-    printf("%d\n", is_uppercase(ch4)); // 0 (false)
+    printf("%d\n", _isupper(ch1)); // 1 (true)
+    printf("%d\n", _isupper(ch2)); // 0 (false)
+    printf("%d\n", _isupper(ch3)); // 0 (false)
+    printf("%d\n", _isupper(ch4)); // 0 (false)
 
     return 0;
 }
